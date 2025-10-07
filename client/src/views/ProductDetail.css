@@ -1,0 +1,35 @@
+.detail-container {
+  padding: 2rem;
+  background-color: #ffffff;
+  margin: 2rem auto;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+.detail-container h2 {
+  color: #ff7e5f;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.detail-container p {
+  margin-bottom: 1rem;
+}
+
+.detail-container button {
+  padding: 0.6rem 1.5rem;
+  border: none;
+  background: linear-gradient(90deg, #ff7e5f, #feb47b);
+  color: #fff;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.detail-container button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #feb47b, #ff7e5f);
+}
