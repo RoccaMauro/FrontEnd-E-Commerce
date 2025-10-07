@@ -5,13 +5,16 @@ import "./ProductCard.css";
 function ProductCard({ product, addToCart }) {
   return (
     <div className="product-card">
+      <div className="img-placeholder"></div>
       <h3>{product.name}</h3>
-      <p>${product.price}</p>
-      <div>
+      <p className="price">${product.price}</p>
+      <div className="button-group">
         <Link to={`/product/${product.id}`}>
-          <button>Ver detalle</button>
+          <button className="btn btn-detail">Ver detalle</button>
         </Link>
-        <button onClick={() => addToCart(product)}>Agregar al carrito</button>
+        <button className="btn btn-cart" onClick={() => addToCart(product)}>
+          Agregar al carrito
+        </button>
       </div>
     </div>
   );

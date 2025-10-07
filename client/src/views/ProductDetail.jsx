@@ -9,20 +9,22 @@ const products = [
   { id: 4, name: "Zapatillas", price: 8000, description: "Zapatillas cómodas y modernas." },
 ];
 
-function ProductDetail() {
+function ProductDetail({ addToCart }) {
   const { id } = useParams();
   const product = products.find((p) => p.id === parseInt(id));
 
   if (!product) return <p>Producto no encontrado.</p>;
 
   return (
-    <div className="detail-container">
-      <h2>{product.name}</h2>
-      <p>{product.description}</p>
-      <p>Precio: ${product.price}</p>
-      <button>Agregar al carrito</button>
-      <br />
-      <Link to="/">Volver al Home</Link>
+    <div className="page-container">
+      <div className="detail-container">
+        <h2>{product.name}</h2>
+        <p>{product.description}</p>
+        <p>Precio: ${product.price}</p>
+        <button onClick={() => addToCart(product)}>Agregar al carrito</button>
+        <br />
+        <Link to="/" className="back-home">Volver al Home</Link>
+      </div>
     </div>
   );
 }
