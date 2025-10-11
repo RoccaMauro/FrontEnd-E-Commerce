@@ -1,36 +1,28 @@
-html, body, #root {
-  height: 100%;
+/* === Reset + Fuente moderna === */
+* {
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f0f2f5;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-.page-container {
-  min-height: calc(100vh - 80px); /* altura menos navbar + footer */
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 2rem;
-  box-sizing: border-box;
-}
-
+/* === Fondo y estilo general === */
 body {
-  background: linear-gradient(180deg, #fff, #fdf2ec);
-  background-attachment: fixed;
+  background: #0f0f0f; /* negro elegante */
+  color: #f5f5f5; /* texto claro */
   min-height: 100vh;
-  overflow-x: hidden;
 }
 
+/* === Contenedor principal === */
 .page-container {
   width: 100%;
   min-height: 100vh;
-  padding-top: 6rem; /* por la navbar fija */
-  padding-bottom: 4rem; /* para que el footer no tape */
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* === Transiciones suaves === */
+a, button {
+  transition: all 0.3s ease;
 }

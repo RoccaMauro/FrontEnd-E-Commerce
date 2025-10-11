@@ -1,33 +1,27 @@
-import React, { useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import Home from "./views/Home";
-import ProductDetail from "./views/ProductDetail";
-import Cart from "./views/Cart";
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar.jsx";
+import Footer from "./components/Footer.jsx";
+import Home from "./views/Home.jsx";
+import Carrito from "./views/Carrito.jsx";
+import Contacto from "./views/Contacto.jsx";
 import "./App.css";
 
 function App() {
-  const [cart, setCart] = useState([]);
-
-  const addToCart = (product) => {
-    setCart((prev) => [...prev, product]);
-  };
-
-  const removeFromCart = (id) => {
-    setCart((prev) => prev.filter((p) => p.id !== id));
-  };
-
   return (
-    <BrowserRouter>
-      <Navbar cartCount={cart.length} />
-      <Routes>
-        <Route path="/" element={<Home addToCart={addToCart} />} />
-        <Route path="/product/:id" element={<ProductDetail addToCart={addToCart} />} />
-        <Route path="/cart" element={<Cart cart={cart} removeFromCart={removeFromCart} />} />
-      </Routes>
+    <div className="page-container">
+      <Navbar />
+
+      <main className="main-content">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/carrito" element={<Carrito />} />
+          <Route path="/contacto" element={<Contacto />} />
+        </Routes>
+      </main>
+
       <Footer />
-    </BrowserRouter>
+    </div>
   );
 }
 

@@ -1,0 +1,10 @@
+.carrito-container {
+  padding: 2rem;
+  text-align: center;
+  color: #f5f5f5;
+}
+
+.carrito-container h1 {
+  color: #d4af37;
+  margin-bottom: 1rem;
+}

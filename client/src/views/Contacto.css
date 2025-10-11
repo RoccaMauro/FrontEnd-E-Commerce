@@ -1,0 +1,86 @@
+/* Fondo general */
+.contacto-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fafafa 0%, #f1f1f1 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+}
+
+/* Contenedor principal */
+.contacto-content {
+  background: white;
+  width: 100%;
+  max-width: 600px;
+  padding: 3rem 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Título y descripción */
+.contacto-content h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.contacto-content p {
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Formulario */
+.contacto-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-group {
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.4rem;
+  color: #444;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.9rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #b48a3c;
+  box-shadow: 0 0 4px rgba(180, 138, 60, 0.4);
+}
+
+/* Botón */
+.enviar-btn {
+  margin-top: 1rem;
+  background: #c6a45d;
+  color: white;
+  border: none;
+  padding: 0.9rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.enviar-btn:hover {
+  background: #b28b46;
+  transform: translateY(-2px);
+}
